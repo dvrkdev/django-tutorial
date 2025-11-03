@@ -7,7 +7,7 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-fallback-key')
+SECRET_KEY = os.environ.get("SECRET_KEY", "dev-fallback-key")
 
 
 DEBUG = True
@@ -79,7 +79,6 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
-
 
 
 LANGUAGE_CODE = "en-us"
