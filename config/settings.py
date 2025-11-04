@@ -89,7 +89,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")  # media files root directory
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# AUTH_USER_MODEl = "main.CustomUser"
+AUTH_USER_MODEL = "main.CustomUser"
 
 LOGIN_REDIRECT_URL = "home"
 LOGOUT_REDIRECT_URL = "home"
