@@ -1,0 +1,1 @@
+- django standard authentication templates and views
