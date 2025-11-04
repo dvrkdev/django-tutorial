@@ -1,4 +1,13 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
+
+
+class CustomUser(AbstractUser):
+    ok = models.BooleanField(default=False)  # user is OK!
+    bio = models.TextField(max_length=300, blank=True, null=True)  # user bio
+
+    def __str__(self):
+        return f"{self.username} {self.ok}"
 
 
 class Item(models.Model):
