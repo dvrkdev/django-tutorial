@@ -1,5 +1,5 @@
 from django import forms
-from .models import Reservation, CustomUser
+from .models import Reservation, CustomUser, Todo
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 
 
@@ -24,3 +24,9 @@ class CustomUserChangeForm(UserChangeForm):
         fields = [
             "username",
         ]
+
+
+class TodoForm(forms.ModelForm):
+    class Meta:
+        model = Todo
+        fields = ["title", "description", "completed"]

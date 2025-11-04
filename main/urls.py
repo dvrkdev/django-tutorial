@@ -7,4 +7,6 @@ urlpatterns = [
     path("", views.index, name="index"),
     path("signup/", views.SignUpView.as_view(), name="signup"),
     path("home/", views.HomeView.as_view(), name="home"),
+    path('todo/list/', views.TodoListView.as_view(), name='todo-list'),
+    path('todo/create/', views.TodoFormView.as_view(), name='todo-create-form'),
 ]

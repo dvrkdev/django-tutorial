@@ -27,3 +27,14 @@ class Reservation(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+
+
+class Todo(models.Model):
+    title = models.CharField(max_length=255)
+    description = models.TextField(max_length=300, blank=True, null=True)
+    completed = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"{self.title[:50]} ..."

@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
-from .forms import ReservationForm
-from django.views.generic import CreateView
+from .forms import ReservationForm, TodoForm
+from django.views.generic import CreateView, ListView
 from django.urls import reverse_lazy
-from .forms import CustomUserCreationForm, CustomUserChangeForm
+from .forms import CustomUserCreationForm, CustomUserChangeForm, TodoForm
+from .models import Todo
 
 
 def function_view(request):
@@ -37,3 +38,15 @@ class SignUpView(CreateView):
 class HomeView(View):
     def get(self, request):
         return HttpResponse("Home")
+
+
+class TodoListView(ListView):
+    model = Todo
+    template_name = 'todo_list.html'
+    context_object_name = 'tasks'
+
+
+class TodoFormView(CreateView):
+    form_class = TodoForm
+    success_url = reverse_lazy("todo-list")
+    template_name = 'todo_form.html'

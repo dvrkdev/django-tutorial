@@ -1,11 +1,11 @@
 # TODO — Django Tutorial Project Roadmap
 
 ## 🧱 1. Project Setup & Base Configuration
-- [ ] Create and activate a virtual environment
-- [ ] Install dependencies from `requirements.txt`
-- [ ] Initialize Django project and check basic settings
-- [ ] Configure `INSTALLED_APPS`, `MIDDLEWARE`, and `TEMPLATES`
-- [ ] Run initial migrations and start the development server
+- [ x ] Create and activate a virtual environment
+- [ x ] Install dependencies from `requirements.txt`
+- [ x ] Initialize Django project and check basic settings
+- [ x ] Configure `INSTALLED_APPS`, `MIDDLEWARE`, and `TEMPLATES`
+- [ x ] Run initial migrations and start the development server
 - [ ] Create core apps (`users`, `todos`, `api`, etc.)
 
 ---

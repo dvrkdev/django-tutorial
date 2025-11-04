@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Reservation, Item
+from .models import Reservation, Item, Todo, CustomUser
 
 
 class ReservationAdmin(admin.ModelAdmin):
@@ -21,3 +21,5 @@ class ItemAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Item, ItemAdmin)
+admin.site.register(Todo)
+admin.site.register(CustomUser)
