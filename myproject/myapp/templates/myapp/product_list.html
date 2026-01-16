@@ -14,7 +14,7 @@
                         <h5 class="card-title">{{ product.name }}</h5>
                         <p class="card-text">{{ product.description|truncatewords:20 }}</p>
                         <p class="text-primary">${{ product.price }}</p>
-                        <a href="" class="btn btn-primary">View</a>
+                        <a href="{% url 'product_detail' product.pk %}" class="btn btn-primary">View</a>
                     </div>
                 </div>
             </div>

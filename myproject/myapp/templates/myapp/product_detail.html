@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+    <div>
+        {% if product.image %}<img src="{{ product.image.url }}" alt="{{ product.name }}" class="w-25">{% endif %}
+        <h1>{{ product.name }}</h1>
+        <p class="lead text-primary">${{ product.price }}</p>
+        <p class="lead">{{ product.description }}</p>
+    </div>
+{% endblock %}
