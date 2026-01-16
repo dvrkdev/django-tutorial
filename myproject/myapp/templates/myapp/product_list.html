@@ -22,7 +22,7 @@
                         <p class="card-text text-muted">{{ product.description|truncatewords:20 }}</p>
                         <p class="fw-bold text-primary">${{ product.price }}</p>
                     </div>
-                    <div class="card-footer bg-white border-top-0">
+                    <div class="card-footer d-flex justify-content-end align-items-center bg-white border-top-0">
                         <a href="{% url 'product_detail' product.pk %}" class="btn btn-primary">View details</a>
                     </div>
                 </div>
