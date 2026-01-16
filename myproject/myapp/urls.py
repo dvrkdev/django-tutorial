@@ -6,4 +6,5 @@ urlpatterns = [
     # path("", views.product_list, name="products"),
     path("", views.ProductListView.as_view(), name="product_list"),
     path("product/<int:pk>/", views.ProductDetailView.as_view(), name="product_detail"),
+    path("register/", views.register_user, name="register_user"),
 ]
