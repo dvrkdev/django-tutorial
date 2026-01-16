@@ -1,0 +1,29 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'product_list' %}">
+            <img src="{% static 'img/logo.png' %}" width="40" height="40">
+        </a>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <div class="navbar-nav">
+                <!-- <a class="nav-link active" aria-current="page" href="#">Home</a> -->
+                <a class="nav-link {% if request.resolver_match.url_name == 'product_list' %}active{% endif %}"
+                   {% if request.resolver_match.url_name == 'product_list' %}aria-current="page"{% endif %}
+                   href="{% url 'product_list' %}">Home</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'register_user' %}active{% endif %}"
+                   {% if request.resolver_match.url_name == 'register_user' %}aria-current="page"{% endif %}
+                   href="{% url 'register_user' %}">Register</a>
+                <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
+            </div>
+        </div>
+    </div>
+</nav>
