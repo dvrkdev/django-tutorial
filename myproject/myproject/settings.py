@@ -15,6 +15,7 @@ DEBUG = "True" == debug_mode_str
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    # "grappelli",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
