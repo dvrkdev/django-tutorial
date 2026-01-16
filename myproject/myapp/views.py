@@ -1,12 +1,6 @@
-from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView
-from .models import Product, Category
+from django.views.generic import DetailView, ListView
 
-
-# # function based view
-# def product_list(request):
-#     products = Product.objects.filter(is_active=True)
-#     return render(request, "myapp/product_list.html", {"products": products})
+from .models import Product
 
 
 class ProductListView(ListView):
