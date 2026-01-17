@@ -2,6 +2,9 @@ from django.contrib import admin
 
 from .models import Category, Product
 
+admin.site.site_header = "My Shop"
+admin.site.index_title = "Dashboard"
+
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
