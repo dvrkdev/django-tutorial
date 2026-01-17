@@ -13,6 +13,14 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    """
+        Product model
+    - name
+    - image
+    - category
+    - description
+    """
+
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     description = models.TextField()
