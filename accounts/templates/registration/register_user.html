@@ -1,15 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-</head>
-<body>
-    <form action="{% url 'accounts:register_user' %}" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit</button>
-    </form>
-</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Create an Account{% endblock %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="row w-100 align-items-center"
+         role="region"
+         aria-labelledby="register-heading">
+        <!-- Welcome section -->
+        <div class="col-md-4 mb-5 mb-md-0 text-center text-md-start">
+            <h1 id="register-heading" class="display-3 fw-bold text-warning">Welcome!</h1>
+            <p class="lead fw-bold">We are so happy you are joining us!</p>
+        </div>
+        <!-- Form section -->
+        <div class="col-md-5">
+            <h2 id="create-account-title" class="mb-3 text-center text-uppercase">Create Account</h2>
+            <form action="{% url 'accounts:register_user' %}"
+                  method="post"
+                  role="form"
+                  aria-labelledby="create-account-title"
+                  aria-describedby="register-help">
+                {% csrf_token %}
+                <p id="register-help" class="visually-hidden">
+                    Fill out the form below to create a new account.
+                    All fields are required unless marked optional.
+                </p>
+                {{ form|crispy }}
+                <button type="submit"
+                        class="btn mt-3 btn-lg fw-semibold btn-warning w-100 text-uppercase"
+                        aria-label="Create a new account"
+                        title="Create your account">Sign Up</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
