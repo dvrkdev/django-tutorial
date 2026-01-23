@@ -29,6 +29,15 @@
                         aria-label="Create a new account"
                         title="Create your account">Sign Up</button>
             </form>
+            <div class="text-center mt-4">
+                <p class="mb-0">
+                    Already have an account?
+                    <a href="{% url 'login' %}"
+                       class="fw-semibold link-warning text-decoration-none"
+                       aria-label="Go to login page"
+                       title="Login to your account">Log in</a>
+                </p>
+            </div>
         </div>
     </div>
 {% endblock %}
