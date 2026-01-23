@@ -1,5 +1,6 @@
-from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
+from django.shortcuts import render
+
 
 def register_user(request):
     if request.method == "POST":
@@ -10,4 +11,4 @@ def register_user(request):
             print(user)
     else:
         form = UserCreationForm()
-    return render(request, 'registration/register_user.html', {'form': form})
+    return render(request, "registration/register_user.html", {"form": form})
