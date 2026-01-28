@@ -1,5 +1,8 @@
+from django.db.models import QuerySet
 from django.http import HttpResponse
 from django.shortcuts import render
+
+from blog.models import Post
 
 # home view
 posts: list[dict] = [
@@ -19,9 +22,10 @@ posts: list[dict] = [
 
 
 def home(request) -> HttpResponse:
+    posts: QuerySet[Post] = Post.objects.all()
     return render(request, "blog/home.html", {"posts": posts})
 
 
 # about view
 def about(request) -> HttpResponse:
-    return render(request, 'blog/about.html')
+    render(request, "blog/about.html")
