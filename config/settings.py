@@ -122,3 +122,6 @@ STATIC_URL = "static/"
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"
 CRISPY_ALLOWED_TEMPLATE_PACK = "bootstrap4"
+
+LOGIN_REDIRECT_URL = "blog:home"
+LOGOUT_REDIRECT_URL = "login"

@@ -28,4 +28,4 @@ def home(request) -> HttpResponse:
 
 # about view
 def about(request) -> HttpResponse:
-    render(request, "blog/about.html")
+    return render(request, "blog/about.html")
